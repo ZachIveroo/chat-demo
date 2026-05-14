@@ -73,7 +73,11 @@
     <script>
       const socket = io();
 
-      const username = prompt('Enter your username:');
+        let username;
+
+        socket.on('connect', () => {
+            username = prompt('Enter your username:');
+        });
 
       function sendMessage() {
         const input = document.getElementById('input');
