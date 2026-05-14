@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <style>
     * {
@@ -63,8 +64,10 @@
   <body>
     <h2>💬 Bubo</h2>
     <div id="messages"></div>
-    <input id="input" type="text" placeholder="Type a message..." autocomplete="off" />
-    <button onclick="sendMessage()">Send</button>
+        <div id="input-area">
+            <input id="input" type="text" placeholder="Type a message..." autocomplete="off" />
+            <button onclick="sendMessage()">Send</button>
+        </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
